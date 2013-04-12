@@ -31,7 +31,7 @@
 					Password
 					<input type='text' name='password'>
 
-					<input type='submit' name='submit' value='Login'>
+					<input id='clickme' type='button' name='submit' value='Login'>
 				</form>
 
 				<a href='signup.html'>signup</a>
@@ -44,6 +44,20 @@
 			<!-- /footer -->
 		</div>
 		<!-- /page -->
+
+
+		<script>
+			$('#clickme').click( function() {
+				alert('Loading resource');
+				$.get('http://secret-coast-5576.herokuapp.com/echo', function(data) {
+  					alert(data);
+				});
+
+
+			});
+
+
+		</script>
 
 	</body>
 </html>
