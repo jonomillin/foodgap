@@ -54,17 +54,17 @@
 			<div data-role="content">
 				<div data-role="content">
 					
-					<span id="confirm_code">
+					<span id="order_detail">
 
 					</span>
 
 					<span> Select Booking Time: </span>
-					<select data-native-menu=false>
-					  <option value=1> 7:30pm </option>
-					  <option value=2 selected=selected> 8:00pm </option>
-					  <option value=3> 8:30pm </option>
-					  <option value=4> 9:00pm </option>
-					  <option value=5> 9:30pm </option>
+					<select data-native-menu=false id='booking_time'>
+					  <option value='1'> 7:30pm </option>
+					  <option value='2' selected=selected> 8:00pm </option>
+					  <option value='3'> 8:30pm </option>
+					  <option value='4'> 9:00pm </option>
+					  <option value='5'> 9:30pm </option>
 					</select>
 					
 					<h3 class='conf-head'>Order Summary:</h3>
@@ -77,6 +77,8 @@
 						<div class=ui-block-b id='Price1'>$2.99</div>
 						<div class=ui-block-a id='Item1'>Something else..</div>
 						<div class=ui-block-b id='Price1'>$7.99</div>
+						<div class=ui-block-a id='total'>Total</div>
+						<div class=ui-block-b id='total_price'>$7.99</div>
 					</div>
 
 					<h3 class='conf-head' id='address_type'>Restaurant Address</h3>

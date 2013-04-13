@@ -1,7 +1,9 @@
 function app() {
 
-var dealAPI = 'http://secret-coast-5576.herokuapp.com/deals';
-var confirmAPI = 'http://secret-coast-5576.herokuapp.com/confirm';
+// var dealAPI = 'http://secret-coast-5576.herokuapp.com/deals';
+// var confirmAPI = 'http://secret-coast-5576.herokuapp.com/confirm';
+var dealAPI = 'http://127.0.0.1:10080/deals';
+var confirmAPI = 'http://127.0.0.1:10080/confirm';
 var cache;
 var useCaching = false;
 // Make httpPost request to url and then return callback.
@@ -151,12 +153,17 @@ $('#confirm').live('pageshow', function () {
     
     httpGet(confirmAPI + "/" + order_id, function( f ) { 
        
+       console.log('Final order');
+       console.log(f);
+
+               
+       $('#total_price').html('$' + f['price'] / 100);
         // Set page items from json object.
 
         $('#confirm_button').bind('click', function() {
             console.log("Clicked confirm");
             
-            httpPost (confirmAPI, {"order_id" : order_id}, function() {
+            httpPost (confirmAPI, {"order_id" : order_id, 'time' : $('#booking_time').val()}, function() {
                 $.mobile.changePage( "success.html", { transition: "slide" });
 
             } );
