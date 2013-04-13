@@ -9,7 +9,8 @@ var useCaching = false;
 // Make httpPost request to url and then return callback.
 function httpPost (url, jdata, callback)
 {
-  $.post(url, jdata, callback);
+
+  $.post(url, jdata, callback).error( function() { alert("We're making some updates at our end. Check back in a little while!")});
 }
 
 // Some filthy hack to pass parameters between pages.
@@ -37,9 +38,9 @@ function httpGet( url, callback)
                 cache = data;
             }
             return callback(data);
-        });
+        }).error( function() { alert("We're making some updates at our end. Check back in a little while!")});
     } else {
-        $.getJSON(url, callback);
+        $.getJSON(url, callback).error( function() { alert("We're making some updates at our end. Check back in a little while!")});
     }
 }
 
