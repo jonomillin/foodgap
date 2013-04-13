@@ -141,7 +141,6 @@ $('#meal_choice').live('pageshow', function () {
         });
     });
 
-
 });
 
 
@@ -157,7 +156,18 @@ $('#confirm').live('pageshow', function () {
        console.log(f);
 
                
+        var k = 0;
+        for(var item in f['dinner']['components'])
+        {
+            var obj = f['dinner']['components'][item];
+            console.log(obj['name'] + ' - ' + obj['quantity'] + 'x' + obj['price']);
+            $('#item' + k).html(obj['quantity'] + ' x ' + obj['name']);
+            $('#price' + k).html('$' + parseInt(obj['quantity']) * parseInt(obj['price']) / 100.0);
+            k = k + 1;
+        }
+
        $('#total_price').html('$' + f['price'] / 100);
+       $('#address').html(f['dinner']['name']);
         // Set page items from json object.
 
         $('#confirm_button').bind('click', function() {
