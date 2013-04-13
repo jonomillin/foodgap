@@ -55,13 +55,18 @@ function build_out_element(item, name, image, _id)
 function build_meal_choice_element(item, image, name, price, description)
 {
 
-    var el = $("<a>", 
-    {"href":"#","data-transition":'slide', "class" :'box meal', "id" :'Meal'+item })
+    var el = $("<div>", 
+    {"data-transition":'slide', "class" :'box meal', "id" :'Meal'+item })
     .css('background-image', 'url("'+image+'")')
-    .html('<div class=desc> <span id="dish_name"> ' + name 
+    .html('<div data-role="fieldcontain" class="top-layer">'
+           +'<a href="#" class="add-circle"> <div class="add">+</div></a>'
+           +'<input type="" class="quantity" min="0" max="10" name="quantity_'+item+'" id="quantity_'+item+'" value="0" />'
+           +'<a href="#" class="add-circle"> <div class="add">−</div></a>'
+           + '</div>'
+           + '<div class=desc> <span id="dish_name"> ' + name 
            +'</span> <span id="dish_price">$' + price/100
            +'</span> <br/> <small id="dish_desc">' + description
-           +'</small> <div data-role="fieldcontain"> <label for="name">Quantity:</label> <input type="number" min="0" max="10" name="quantity_'+item+'" value="0"  /> </div> </div> '); 
+           +'</small></div> '); 
     return el;
 }
 
