@@ -1,9 +1,9 @@
 function app() {
 
-// var dealAPI = 'http://secret-coast-5576.herokuapp.com/deals';
-// var confirmAPI = 'http://secret-coast-5576.herokuapp.com/confirm';
-var dealAPI = 'http://127.0.0.1:10080/deals';
-var confirmAPI = 'http://127.0.0.1:10080/confirm';
+var dealAPI = 'http://secret-coast-5576.herokuapp.com/deals';
+var confirmAPI = 'http://secret-coast-5576.herokuapp.com/confirm';
+// var dealAPI = 'http://127.0.0.1:10080/deals';
+// var confirmAPI = 'http://127.0.0.1:10080/confirm';
 var cache;
 var useCaching = false;
 // Make httpPost request to url and then return callback.
