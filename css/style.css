@@ -172,14 +172,12 @@ form#register .ui-select {
 }
 .add {
     color: white;
-    text-decoration: none;
     font-size: 3em;
     font-weight: bold;
     border: 5px solid white;
     border-radius: 50%;
     width: 35px;
     height: 40px;
-    display: block;
     line-height: 0.7em;
     padding-left: 5px;
     text-shadow: 0 0 5px grey;
@@ -191,17 +189,15 @@ form#register .ui-select {
     margin: 0 10px;
 }
 .quantity {
-color: white;
-border: none;
-color: whitesmoke;
-font-size: 3em;
-background: none;
-margin-top: -05px;
-display: inline-block;
-float: right;
-width: 30px;
-line-height: 1.2em;
-font-weight: bold;
+    color: white;
+    border: none;
+    font-size: 3em;
+    background: none;
+    margin-top: -3px;
+    float: right;
+    width: 30px;
+    font-weight: bold;
+    margin-left: 5px
 }
 
 .top-layer {
