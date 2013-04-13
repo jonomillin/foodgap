@@ -1,0 +1,156 @@
+
+#container {
+    background-color: whitesmoke;
+}
+
+.box {
+    margin: 20px 2%;
+    border: 1px solid lightgrey;
+    background-color: white;
+    background-repeat: no-repeat;
+    box-shadow: 2px 2px 1px rgb(231, 231, 231); 
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+.box:first-child {
+    margin-top:5px;
+}
+.start {
+    font-size: 34pt;
+    background-position: right;
+    font-family: 'open sans';
+    font-weight: 200;
+    font-style: italic;
+    padding: 25px;
+}
+/*Front Page*/
+#eat-out {
+    background-image: url('../images/reserved.png') ;
+}
+#order-in {
+    background-image: url('../images/takeawaybox.png');
+}
+#cook-in {
+    background-image: url('../images/pot.png');
+}
+.ui-header .ui-title {
+    font-family: 'clicker script';
+    font-weight: bold;
+    text-shadow: 0px 0px 10px lightgrey;
+    font-size: 40px;
+    margin: 0;
+}
+.ui-body-c .ui-link:visited, 
+.ui-body-c .ui-link:hover, 
+.ui-body-c .ui-link {
+    color: black;
+    font-weight: 300;
+}
+
+/*Out*/
+.restaurant {
+    background-position: center;
+    padding: 80px 0px 10px
+}
+#Rest0 {
+     background-image: url('../images/Boulevard.jpg');
+     background-size: 100%;
+}
+
+#Rest1 {
+     background-image: url('../images/Boulevard.jpg');
+     background-size: 100%;
+}
+#Rest2 {
+     background-image: url('../images/osha.jpeg');
+     background-size: 100%;
+}
+#Rest3 {
+     background-image: url('../images/piazza.jpg');
+     background-size: 100%;
+}
+
+/*Meal*/
+.meal {
+    background-position: center;
+    padding: 80px 0px 10px
+}
+#Meal1 {
+     background-image: url('../images/salad.jpg');
+     background-size: 100%;
+}
+#Meal2 {
+     background-image: url('../images/tortellini.jpg');
+     background-size: 100%;
+}
+#Meal3 {
+     background-image: url('../images/pizza.jpg');
+     background-size: 100%;
+}
+
+
+
+.box p {
+    font-size: 18pt;
+    font-weight: 300;
+    width: 1-00%;
+    background-color: white;
+    padding:  0 0 0 10px; 
+}
+.desc {
+    font-size: 18pt;
+    font-weight: 300;
+    width: 1-00%;
+    background-color: white;
+    padding:  0 0 0 0px; 
+}
+.desc p {
+    line-height: 50%;
+}
+.desc small{
+    font-size: 10pt;
+    
+}
+.yelp {
+    text-align: right;
+    background-image: url('../images/yelp_full_star.png');
+    width:70px;
+    height: 15px;
+    background-color: black;
+    float: right;
+    margin-right: 4px;
+    margin-top: -44px;
+}
+.yelp.star1 {width: 16px}
+.yelp.star2 {width: 32px}
+.yelp.star3 {width: 48px}
+.yelp.star35 {width: 56px}
+.yelp.star4 {width: 64px}
+.yelp.star5 {width: 80px}
+
+
+
+/* Confirm Page */
+h3.conf-head {
+    padding-top:25px; 
+    line-height:10%;
+}
+
+/*Registration*/
+h3 {text-align: center}
+form#register label {
+    width: 35%;
+    padding: 10px 0;
+    float: left;
+}
+form#register input[type=text],
+form#register input[type=password] {
+    width: 65%;
+}
+#cvc {
+    
+}
+form#register .ui-select {
+    display: inline-block;
+}

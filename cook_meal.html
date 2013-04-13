@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+
+<HTML>
+	<head>
+		<meta charset="UTF-8">
+		<title>Dinner</title>
+
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+
+        <link rel="stylesheet" href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link href='http://fonts.googleapis.com/css?family=Clicker+Script' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+        <script src="https://s3.amazonaws.com/codiqa-cdn/jquery-1.7.2.min.js">
+        </script>
+        <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.js">
+        </script>
+	</head>
+
+
+	<body>
+
+		<div data-role="page" id="meal" data-add-back-btn=true data-dom-cache=true>
+			<div data-role="header">
+				<h1 id='title'>Fire Roasted Tomato Chicken Pasta</h1>
+			</div> <!-- /Header -->
+
+
+			<div data-role="content">
+				<img src="images/pasta.jpg" width="100%">
+				
+
+				<h4 id='description'>An orzo based pasta dish with fire roasted tomatoes, parmesan, and organic chicken thighs. Garnished with flatleaf parsley.</h4>
+				
+				<!-- <div id='ingredients' data-role=collapsible> -->
+				<h3>Ingredients:</h3>
+					<div data-role=controlgroup>
+						<label for=chicken>1 pound boneless, skinless chicken thighs</label>
+						<input type=checkbox id='chicken' name='buy_chicken' checked=checked/>
+						<label for=can>1 (18.2 oz) can Progresso Fire Roasted Tomato Recipe Starter</label>
+						<input type=checkbox id='can' name='buy_can' checked=checked/>
+						<label for=orzo>1 1/2 cups orzo</label>
+						<input type=checkbox id='orzo' name='buy_orzo' checked=checked/>
+						<label for=parmesan>1/2 cup freshly grated Parmesan cheese</label>
+						<input type=checkbox id='parmesan' name='buy_parmesan' checked=checked/>
+						<label for=parsley>1/4 cup fresh parsley, for garnish</label>
+						<input type=checkbox id='parsley' name='buy_parsley' checked=checked/>
+					</div>
+				<!-- </div> -->
+
+				<div id='instructions' data-role=collapsible>
+					<h3>Instructions:</h3>
+
+					<ol>
+						<li>Heat the olive oil in a large skillet over medium-high. Season the chicken with salt and pepper on both sides, and add to the skillet. Sear on both sides for 8 minutes total.</li>
+						<li>Add the fire roasted tomato sauce and simmer on medium-low for 15 minutes.</li>
+						<li>Shred the chicken with two forks right in the skillet.</li>
+						<li>In the meantime, cook the orzo in a large pot of salted water until al dente. Drain and stir into the chicken.</li>
+						<li>Off the heat add the parmesan and stir to combine. Add another pinch of salt and pepper.
+	Garnish with parsley and serve immediately!</li>
+
+					</ol>
+				</div>
+
+			</div> <!-- /Content -->
+
+			<div data-role=footer data-theme=d data-position=fixed>
+				<div data-role=navbar>
+					<ul>
+						<li><a href='order.html' id='order' data-icon=check>Place Order</a></li>
+						<li><a href=# id='notes' data-icon=alert>Add Notes</a></li>
+						<li><a href=# id='add' data-icon=plus>Add Portion</a></li>
+						<li><a href=# id='remove' data-icon=minus>Remove Portion</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div> <!-- /Page -->
+
+	</body>
+
+	<script type="text/javascript">
+	$('#ingredients').trigger('expand');
+	</script>
+
+</HTML>

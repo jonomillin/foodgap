@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+
+<HTML>
+	<head>
+		<meta charset="UTF-8">
+		<title>Dinner</title>
+
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+
+        <link rel="stylesheet" href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link href='http://fonts.googleapis.com/css?family=Clicker+Script' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+        <script src="https://s3.amazonaws.com/codiqa-cdn/jquery-1.7.2.min.js">
+        </script>
+        <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.js">
+        </script>
+	</head>
+
+
+	<body>
+		<div data-role="page" id="register" data-dom-cache=true>
+			<div data-role="header">
+				<h1>Billing</h1>
+			</div>
+
+			<div data-role="content">
+				<form name="register" id="register" action="index.html" method="get" data-transition=slide>
+					<h3>Address</h3>
+					<label>Street</label>
+					<input type="text" name="address">
+					<label>House Number</label>
+					<input type="text" name="housenumber">
+					<label>City</label>
+					<input type="text" name="housenumber">
+					<label>Zip</label>
+					<input type="text" name="housenumber">
+					
+					
+					<br><h3>Billing</h3>
+					<label>Card Number</label>
+					<input type="text" name="cardnumber">
+					<label>CVC</label>
+					<input type="text" name="cvc" id="cvc">
+
+					<label>Expiration</label>
+					<select name="expirary-month" id="expirary-month" data-mini=true data-inline=true>
+						<option value="01">1</option>
+						<option value="02">2</option>
+						<option value="03">3</option>
+						<option value="04">4</option>
+						<option value="05">5</option>
+						<option value="06">6</option>
+						<option value="07">7</option>
+						<option value="08">8</option>
+						<option value="09">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+					</select>
+
+					<select name="expirary-year" id="expirary-year" data-mini=true data-inline=true>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+					</select>					
+					
+					
+					<label style="margin-top:8px">Billing Zip</label>
+					<input type="text" name="zip">
+
+					<br>
+					<input type="submit" value="Save" data-icon="check" data-theme="b">
+				</form>
+			</div> <!-- /Content -->
+
+		</div> <!-- /Page -->
+
+	</body>
+
+</HTML>

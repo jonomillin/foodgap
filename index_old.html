@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+
+<HTML>
+	<head>
+		<meta charset="UTF-8">
+		<title>Dinner</title>
+
+		<meta name='viewport' content='width=device-width, user-scalable=no'>
+
+
+		<link rel="stylesheet" href="css/jquery.mobile.structure-1.0.1.CSS" />
+		<link rel="stylesheet" href="css/jquery.mobile-1.0.1.CSS" />
+		 
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script src="js/jquery.mobile-1.0.1.min.js"></script>
+	</head>
+
+
+	<body>
+		<div data-role="page" id="main" data-theme="d">
+
+			<div data-role="header">
+				<h1>Dinner</h1>
+				<!-- <div id='select_group'>
+					<select data-native-menu=false multiple=multiple>
+						<option value=1 selected=selected> Jono </option>
+						<option value=2 selected=selected> Mike </option>
+						<option value=3 selected=selected> Nick </option>
+						<option value=4> Thomas </option>
+						<option value=5> Carine </option>
+					</select>
+				</div> --> <!-- /SelectGroup -->
+			</div> <!-- /Header -->
+
+
+			<div data-role="content">
+						<a href="out.html" data-prefetch>
+							Eat Out
+							<img src="images/eat_out.jpg" width="100%" style="margin=-5px"/>
+						</a>
+						<a href="in.html" data-prefetch>
+							Order In
+							<img src="images/order_in.jpg" width="100%"/>
+						</a>
+						<a href="cook.html"  data-prefetch>
+							Cook at Home
+							<img src="images/cook_home.jpg" width="100%"/>
+						</a>
+				</ul>	
+			</div> <!-- /Content -->
+
+		</div> <!-- /Page -->
+
+
+		<!-- This is left here for reference sake.. -->
+		<div data-role=dialog id='group' data-add-back-btn=true>
+			<div data-role=header>
+				<h1>Change Group</h1>
+			</div>
+			<div data-role=content>
+				<ul data-role=listview data-inset=true data-counttheme=a>
+					<li>Jono, Mike, Nick
+						<span class=ui-li-count>3</span></li>
+					<li>Some of the AP guys
+						<span class=ui-li-count>24</span></li>
+					<li>Thomas and Carine
+						<span class=ui-li-count>2</span></li>
+				</ul>
+			</div>
+		</div> <!-- /Page -->
+
+	</body>
+
+</HTML>

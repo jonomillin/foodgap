@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+
+<HTML>
+	<head>
+		<meta charset="UTF-8">
+		<title>Dinner</title>
+
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+        <link rel="stylesheet" href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link href='http://fonts.googleapis.com/css?family=Clicker+Script' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+        <script src="https://s3.amazonaws.com/codiqa-cdn/jquery-1.7.2.min.js"></script>
+        <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+
+
+        <script>
+          try {
+                $(function() {
+                	window.location.href = "index.html";
+                });
+            } catch (error) {
+                console.error("Your javascript has an error: " + error);
+            }
+
+
+        </script>
+
+        <style type="text/css">
+        	.ui-grid-a .ui-block-a {
+        		text-align: left;
+        		font-weight: bold;
+        		width: 80%;
+        		padding: 5px, 5px, 5px, 5px;
+        	}
+        	.ui-grid-a .ui-block-b {
+        		text-align: right;
+        		font-weight:lighter;
+        		width: 20%;
+        	}
+    	</style>
+
+	</head>
+
+
+	<body>
+		<div data-role="page" id="confirm" data-add-back-btn=true data-dom-cache=true>
+			<div data-role="header">
+				<h1 id="restaurant name">Confirmation</h1>
+			</div> <!-- /Header -->
+
+
+			<div data-role="content">
+				<div data-role="content">
+					
+					<span id="confirm_code">
+
+					</span>
+
+					<span> Select Booking Time: </span>
+					<select data-native-menu=false>
+					  <option value=1> 7:30pm </option>
+					  <option value=2 selected=selected> 8:00pm </option>
+					  <option value=3> 8:30pm </option>
+					  <option value=4> 9:00pm </option>
+					  <option value=5> 9:30pm </option>
+					</select>
+					
+					<h3 class='conf-head'>Order Summary:</h3>
+					<div class=ui-grid-a>
+						<div class=ui-block-a id='Item1'>Yummy Pizza with Cheese</div>
+						<div class=ui-block-b id='Price1'>$5.99</div>
+						<div class=ui-block-a id='Item1'>Deicious Pasta with Meat</div>
+						<div class=ui-block-b id='Price1'>$9.99</div>
+						<div class=ui-block-a id='Item1'>Weird Salad</div>
+						<div class=ui-block-b id='Price1'>$2.99</div>
+						<div class=ui-block-a id='Item1'>Something else..</div>
+						<div class=ui-block-b id='Price1'>$7.99</div>
+					</div>
+
+					<h3 class='conf-head' id='address_type'>Restaurant Address</h3>
+					<p id='address'>
+						Passia Restaurant, <br>
+						337 3rd St, <br>
+						San Francisco, <br>
+						91407
+					</p>
+
+					<h3 class='conf-head'>Contact Information:</h3>
+					<p id='contact_info'>Tel: +1 415-512-1693 ‎</p>
+
+				</div> 
+			</div> <!-- /Content -->
+
+			<div data-role=footer data-theme=d data-position=fixed>
+				<div data-role=navbar>
+					<ul>
+					<li><a href='#' id='confirm_button' data-icon=check data-transition=slide data-prefetch>Confirm</a></li>				
+					</ul>
+				</div>
+			</div>
+
+		</div> <!-- /Page -->
+	<script>
+
+	</script>
+	</body>
+</HTML>

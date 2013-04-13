@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+
+<HTML>
+	<head>
+		<meta charset="UTF-8">
+		<title>Dinner</title>
+
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+        <link rel="stylesheet" href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link href='http://fonts.googleapis.com/css?family=Clicker+Script' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+        <script src="https://s3.amazonaws.com/codiqa-cdn/jquery-1.7.2.min.js">
+        </script>
+        <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.js">
+        </script>
+        <script>
+    try {
+                $(function() {
+                	window.location.href = "index.html";
+                });
+            } catch (error) {
+                console.error("Your javascript has an error: " + error);
+            }
+        </script>
+	</head>
+
+
+	<body>
+		<div data-role="page" id="meal_choice" data-add-back-btn=true>
+			<div data-role="header">
+				<h1 id="restaurant name">Pazzia</h1>
+			</div> <!-- /Header -->
+
+
+			<div data-role="content">
+				<div data-role="content" id='meal_choice_choices'>
+						<!-- This will be populated by Javascript - Nick -->
+				</div> 
+			</div> <!-- /Content -->
+
+			
+
+			<div data-role=footer data-theme=d data-position=fixed>
+				<div data-role=navbar>
+					<ul>
+					<li><a href='#' id='order' data-icon=check data-transition=slide rel="external">Place Order</a></li>
+					<li><a href='#' id='notes' data-icon=alert data-transition=slide rel="external">Add Notes</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div> <!-- /Page -->
+	<script>
+
+	</script>
+	</body>
+</HTML>

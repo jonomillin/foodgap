@@ -1,63 +1,45 @@
 <!DOCTYPE html>
 <html>
-	<title>&nbsp;</title>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
-		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-	</head>
-	<body>
-		<!-- Start of first page I -->
-		<div data-role="page" id="page1">
-			<!-- Header -->
-			<div data-role="header">
-				<h1>Phonegap Template &amp;</h1>
-
-			</div>
-			<!-- /header -->
-			<!-- Content    -->
-			<div data-role="content">
-				<h3>GetDinner</h3>
-				<p>
-					Welcome to get dinner!
-				</p>
-				<form>
-					Username
-					<input type='text' name='username'>
-					Password
-					<input type='text' name='password'>
-
-					<input id='clickme' type='button' name='submit' value='Login'>
-				</form>
-
-				<a href='signup.html'>signup</a>
-			</div>
-			<!-- /content -->
-			<!-- footer -->
-			<div data-role="footer">
-				<h4>&copy; 2013 GetDinner</h4>
-			</div>
-			<!-- /footer -->
-		</div>
-		<!-- /page -->
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link href='http://fonts.googleapis.com/css?family=Clicker+Script' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+        <script src="https://s3.amazonaws.com/codiqa-cdn/jquery-1.7.2.min.js"></script>
+        <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script src="my.js"></script>
+        <!-- User-generated css -->
+        <style>
+        </style>
+        <!-- User-generated js -->
+        <script>        
+      
 
 
-		<script>
-			$('#clickme').click( function() {
-				alert('Loading resource');
-				$.get('http://secret-coast-5576.herokuapp.com/echo', function(data) {
-  					alert(data);
-				});
+        </script>
+    </head>
 
 
-			});
-
-
-		</script>
-
-	</body>
+    <body>
+        <!-- Home -->
+        <div data-role="page" id="home" data-dom-cache=true>
+            <div data-theme="a" data-role="header">
+                <h3>Dinner</h3>
+            </div>
+            
+            <div data-role="content" id="container">
+                <a href="out.html" class="box start" id="eat-out" data-transition=slide data-prefetch>Eat Out</a>
+                <a href="in.html" class="box start" id="order-in" data-transition=slide data-prefetch>Order In</a>
+                <a href="cook.html" class="box start" id="cook-in" data-transition=slide data-prefetch>Cook In</a>
+            </div>
+        </div>
+        
+    </body>
 </html>
