@@ -143,19 +143,19 @@ $('#meal_choice').live('pageshow', function () {
     $('#order').click(function() {
         var postData = {}
         console.log("WHY ARE YOU SHOWING!!!");
-        alert('In quantities.');
+        console.log('In quantities.');
          $('input[name^="quantity"]').each( function() {
             postData[this.name] = this.value;
-            alert(this.name);
+            console.log(this.name);
          });
         
         postData["dinner_id"] = choice;
         httpPost(dealAPI, postData, function(data)
         {
 
-            alert("Back from confirmations.");
+            console.log("Back from confirmations.");
             data = $.parseJSON( data );
-            alert(data['order_id']);
+            console.log(data['order_id']);
             $.mobile.changePage( "confirm.html?order_id=" + data['order_id'], { transition: "slide" });
 
         });
