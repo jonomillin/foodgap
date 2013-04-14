@@ -90,6 +90,7 @@ function build_meal_choice_element(item, image, name, price, description)
 
 // Fetch and show all the options for eating out at a particular restaurant. 
 $('#out').live('pageshow', function () {     
+    $.mobile.showPageLoadingMsg();
     // Fetch all of todays deals
     httpGet(dealAPI, function(f) { 
         // Clear out the div
@@ -97,6 +98,7 @@ $('#out').live('pageshow', function () {
         // console.log('Clearing the div.');
         $('#out_choices').html('');   
         //Loop through the deal
+        $.mobile.hidePageLoadingMsg();
         $.each(f, function (i, data) {
             // console.log('Received: ' + data.name);
             // Only restaurants
@@ -112,11 +114,12 @@ $('#out').live('pageshow', function () {
                 console.log('NOT adding non-restaurant: ' + data.name);
             }
         });  
+    
     });
 });
 
 $('#meal_choice').live('pageshow', function () {
-
+    $.mobile.showPageLoadingMsg();
     var choice = $.urlParam('choice');
 
     httpGet(dealAPI, function(dinners) { 
@@ -132,6 +135,7 @@ $('#meal_choice').live('pageshow', function () {
         $('#meal_choice_choices').append(el);
     });  
         }
+    $.mobile.hidePageLoadingMsg();
     });
 
     $('#order').click(function() {
@@ -159,7 +163,7 @@ $('#meal_choice').live('pageshow', function () {
 
 
 $('#confirm').live('pageshow', function () {     
-
+    $.mobile.showPageLoadingMsg();
     var order_id = $.urlParam('order_id');
     
     httpGet(confirmAPI + "/" + order_id, function( f ) { 
@@ -191,6 +195,7 @@ $('#confirm').live('pageshow', function () {
             } );
 
         });
+    $.mobile.hidePageLoadingMsg();
     });
 
 });
