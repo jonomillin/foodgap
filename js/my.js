@@ -68,7 +68,7 @@ function build_meal_choice_element(item, image, name, price, description)
            +'<a href="#" class="add-circle" '
             + 'onclick="javascript:$(\'#quantity_'+item+'\').val(parseInt($(\'#quantity_'+item+'\').val())+1);">'
             + '<div class="plus"></div></a>'
-           +'<input type="" class="quantity" min="0" max="10" name="quantity_'+item+'" id="quantity_'+item+'" value="0" />'
+           +'<input type="" readonly class="quantity" min="0" max="10" name="quantity_'+item+'" id="quantity_'+item+'" value="0" />'
            +'<a href="#" class="add-circle"'
             + 'onclick="javascript:$(\'#quantity_'+item+'\').val(parseInt(Math.max(0, $(\'#quantity_'+item+'\').val()-1)));">'
             + '<div class="minus"></div></a>'
@@ -125,6 +125,7 @@ $('#meal_choice').live('pageshow', function () {
     var choice = $.urlParam('choice');
 
     httpGet(dealAPI, function(dinners) { 
+
 
     $('#meal_choice_choices').html('');
   
