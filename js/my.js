@@ -129,7 +129,7 @@ $('#meal_choice').live('pageshow', function () {
     $('#meal_choice_choices').html('');
   
     for(var k = 0; k < dinners.length; k++)
-{
+    {
 
         if (dinners[k]["_id"]["$oid"] != choice) continue;
     $.each(dinners[k].components, function (i, data) {
@@ -142,6 +142,7 @@ $('#meal_choice').live('pageshow', function () {
 
     $('#order').click(function() {
         var postData = {}
+        console.log("WHY ARE YOU SHOWING!!!");
         alert('In quantities.');
          $('input[name^="quantity"]').each( function() {
             postData[this.name] = this.value;
