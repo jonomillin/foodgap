@@ -1,4 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="77.2727272727px" height="100px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
-<path fill="#000000" d="M179.221,269.221c-70.294,70.294-70.293,184.264,0,254.558s184.265,70.294,254.559,0  c70.293-70.293,70.293-184.265,0-254.558C363.485,198.927,249.514,198.928,179.221,269.221z M408.323,498.324  c-56.235,56.229-147.411,56.231-203.646,0c-56.236-56.235-56.235-147.413,0-203.647c56.236-56.236,147.411-56.235,203.647-0.001  C464.559,350.913,464.559,442.088,408.323,498.324z"/>
-<path fill="#000000" d="M387.5,414.5h-162c-9.941,0-18-8.059-18-18c0-9.941,8.059-18,18-18h162c9.941,0,18,8.059,18,18  C405.5,406.441,397.441,414.5,387.5,414.5z"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="77.273px" height="100px" viewBox="0 0 77.273 100" enable-background="new 0 0 77.273 100" xml:space="preserve">
+<g>
+	
+		<image overflow="visible" opacity="0.75" width="53" height="53" xlink:href="9E235B47.png"  transform="matrix(1 0 0 1 12.1365 23.5)">
+	</image>
+	<g>
+		<path fill="#FFFFFF" d="M22.629,33.993c-8.875,8.875-8.875,23.265,0,32.141c8.876,8.876,23.266,8.876,32.142,0
+			c8.875-8.876,8.875-23.266,0-32.141C45.894,25.117,31.505,25.117,22.629,33.993z M51.556,62.92c-7.101,7.1-18.613,7.1-25.713,0
+			c-7.101-7.101-7.101-18.613,0-25.713c7.1-7.1,18.612-7.1,25.713,0C58.656,44.307,58.656,55.819,51.556,62.92z"/>
+	</g>
+</g>
+<g>
+	
+		<image overflow="visible" opacity="0.75" width="32" height="11" xlink:href="9E235B45.png"  transform="matrix(1 0 0 1 23.1365 44.5)">
+	</image>
+	<g>
+		<path fill="#FFFFFF" d="M48.927,52.336H28.472c-1.255,0-2.272-1.018-2.272-2.273c0-1.255,1.018-2.272,2.272-2.272h20.454
+			c1.256,0,2.273,1.018,2.273,2.272C51.2,51.318,50.182,52.336,48.927,52.336z"/>
+	</g>
+</g>
 </svg>
