@@ -29,13 +29,13 @@
 }
 /*Front Page*/
 #eat-out {
-    background-image: url('http://secret-coast-5576.herokuapp.com/static/img/reserved.png') ;
+    background-image: url('../img/reserved.png') ;
 }
 #order-in {
-    background-image: url('http://secret-coast-5576.herokuapp.com/static/img/takeawaybox.png');
+    background-image: url('../img/takeawaybox.png');
 }
 #cook-in {
-    background-image: url('http://secret-coast-5576.herokuapp.com/static/img/pot.png');
+    background-image: url('../img/pot.png');
 }
 .ui-header .ui-title {
     font-family: 'clicker script';
@@ -57,20 +57,20 @@
     padding: 80px 0px 10px
 }
 #Rest0 {
-     background-image: url('http://secret-coast-5576.herokuapp.com/static/img/Boulevard.jpg');
+     background-image: url('../img/Boulevard.jpg');
      background-size: 100%;
 }
 
 #Rest1 {
-     background-image: url('http://secret-coast-5576.herokuapp.com/static/img/Boulevard.jpg');
+     background-image: url('../img/Boulevard.jpg');
      background-size: 100%;
 }
 #Rest2 {
-     background-image: url('http://secret-coast-5576.herokuapp.com/static/img/osha.jpeg');
+     background-image: url('../img/osha.jpeg');
      background-size: 100%;
 }
 #Rest3 {
-     background-image: url('http://secret-coast-5576.herokuapp.com/static/img/piazza.jpg');
+     background-image: url('../img/piazza.jpg');
      background-size: 100%;
 }
 
@@ -80,15 +80,15 @@
     padding: 10px 0px 20px
 }
 #Meal1 {
-     background-image: url('http://secret-coast-5576.herokuapp.com/static/img/salad.jpg');
+     background-image: url('../img/salad.jpg');
      background-size: 100%;
 }
 #Meal2 {
-     background-image: url('http://secret-coast-5576.herokuapp.com/static/img/tortellini.jpg');
+     background-image: url('../img/tortellini.jpg');
      background-size: 100%;
 }
 #Meal3 {
-     background-image: url('http://secret-coast-5576.herokuapp.com/static/img/pizza.jpg');
+     background-image: url('../img/pizza.jpg');
      background-size: 100%;
 }
 
@@ -115,7 +115,7 @@
 }
 .yelp {
     text-align: right;
-    background-image: url('http://secret-coast-5576.herokuapp.com/static/img/yelp_full_star.png');
+    background-image: url('../img/yelp_full_star.png');
     width:70px;
     height: 15px;
     background-color: black;
@@ -182,10 +182,10 @@ form#register .ui-select {
     background-position: -16px;
 }
 .plus {
-    background-image: url('../images/plus.svg');   
+    background-image: url('../img/plus.svg');   
 }
 .minus {
-    background-image: url('../images/minus.svg');   
+    background-image: url('../img/minus.svg');   
 }
  
 .add-circle {
