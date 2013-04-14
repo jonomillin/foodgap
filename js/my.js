@@ -48,7 +48,7 @@ function build_out_element(item, name, image, _id)
 {
     var u = 'url("'+image+'")';    
     var el = $("<a>", 
-    {"href":"meal_choice.html?choice=" + _id, "data-transition":"slide", "class":"box restaurant", "id":"Rest"+item})
+    {"href":"meal_choice.html?choice=" + _id, "data-transition":"slide", "class":"box restaurant rest"})
     .css('background-image', u)
     .html('<p id="Rest' + item
         + 'Name">'+name+'<div class="yelp star5"></div></p>');
@@ -62,7 +62,7 @@ function build_meal_choice_element(item, image, name, price, description)
         
     }
     var el = $("<div>", 
-    {"data-transition":'slide', "class" :'box meal', "id" :'Meal'+item })
+    {"data-transition":'slide', "class" :'box meal' })
     .css('background-image', 'url("'+image+'")')
     .html('<div data-role="fieldcontain" class="top-layer">'
            +'<a href="#" class="add-circle" '
@@ -70,11 +70,11 @@ function build_meal_choice_element(item, image, name, price, description)
             + '<div class="plus"></div></a>'
            +'<input type="" class="quantity" min="0" max="10" name="quantity_'+item+'" id="quantity_'+item+'" value="0" />'
            +'<a href="#" class="add-circle"'
-            + 'onclick="javascript:$(\'#quantity_'+item+'\').val(parseInt($(\'#quantity_'+item+'\').val())-1);">'
+            + 'onclick="javascript:$(\'#quantity_'+item+'\').val(parseInt(Math.max(0, $(\'#quantity_'+item+'\').val()-1)));">'
             + '<div class="minus"></div></a>'
            + '</div>'
            + '<div class=desc> <span id="dish_name"> ' + name 
-           +'</span> <span id="dish_price">$' + price/100
+           +'</span> <span id="dish_price">$' + parseFloat(price/100).toFixed(2)
            +'</span> <br/> <small id="dish_desc">' + description
            +'</small></div> '); 
     return el;
@@ -182,11 +182,11 @@ $('#confirm').live('pageshow', function () {
             var obj = f['dinner']['components'][item];
             console.log(obj['name'] + ' - ' + obj['quantity'] + 'x' + obj['price']);
             $('#item' + k).html(obj['quantity'] + ' x ' + obj['name']);
-            $('#price' + k).html('$' + parseInt(obj['quantity']) * parseInt(obj['price']) / 100.0);
+            $('#price' + k).html('$' + parseFloat( parseInt(obj['quantity']) * parseInt(obj['price']) / 100.0).toFixed(2));
             k = k + 1;
         }
 
-       $('#total_price').html('$' + f['price'] / 100);
+       $('#total_price').html('$' + parseFloat(f['price'] / 100).toFixed(2));
        $('#address').html(f['dinner']['name']);
         // Set page items from json object.
 
