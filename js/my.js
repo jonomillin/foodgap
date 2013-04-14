@@ -66,10 +66,12 @@ function build_meal_choice_element(item, image, name, price, description)
     .css('background-image', 'url("'+image+'")')
     .html('<div data-role="fieldcontain" class="top-layer">'
            +'<a href="#" class="add-circle" '
-            + 'onclick="javascript:$(\'#quantity_'+item+'\').val(parseInt($(\'#quantity_'+item+'\').val())+1);"> <div class="add">+</div></a>'
+            + 'onclick="javascript:$(\'#quantity_'+item+'\').val(parseInt($(\'#quantity_'+item+'\').val())+1);">'
+            + '<div class="plus"></div></a>'
            +'<input type="" class="quantity" min="0" max="10" name="quantity_'+item+'" id="quantity_'+item+'" value="0" />'
            +'<a href="#" class="add-circle"'
-            + 'onclick="javascript:$(\'#quantity_'+item+'\').val(parseInt($(\'#quantity_'+item+'\').val())-1);"> <div class="add">−</div></a>'
+            + 'onclick="javascript:$(\'#quantity_'+item+'\').val(parseInt($(\'#quantity_'+item+'\').val())-1);">'
+            + '<div class="minus"></div></a>'
            + '</div>'
            + '<div class=desc> <span id="dish_name"> ' + name 
            +'</span> <span id="dish_price">$' + price/100

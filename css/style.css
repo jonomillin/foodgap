@@ -4,7 +4,7 @@
 }
 
 .box {
-    margin: 20px 2%;
+    margin: 20px 0;
     border: 1px solid lightgrey;
     background-color: white;
     background-repeat: no-repeat;
@@ -16,13 +16,16 @@
 .box:first-child {
     margin-top:5px;
 }
+/* hack to keep nested content boxes from getting smaller and smaller. */
+.ui-content div.ui-content {padding: 0;}
+
 .start {
-    font-size: 34pt;
+    font-size: 24pt;
     background-position: right;
     font-family: 'open sans';
     font-weight: 200;
     font-style: italic;
-    padding: 25px;
+    padding: 25px 20px;
 }
 /*Front Page*/
 #eat-out {
@@ -38,7 +41,7 @@
     font-family: 'clicker script';
     font-weight: bold;
     text-shadow: 0px 0px 10px lightgrey;
-    font-size: 40px;
+    font-size: 30px;
     margin: 0;
 }
 .ui-body-c .ui-link:visited, 
@@ -94,16 +97,14 @@
 .box p {
     font-size: 18pt;
     font-weight: 300;
-    width: 1-00%;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.95);;
     padding:  0 0 0 10px; 
 }
 .desc {
     font-size: 18pt;
     font-weight: 300;
-    width: 1-00%;
-    background-color: white;
-    padding:  0 0 0 0px; 
+    background-color: rgba(255, 255, 255, 0.95);;
+    padding: 0;
 }
 .desc p {
     line-height: 50%;
@@ -158,7 +159,7 @@ form#register .ui-select {
 /*out*/
 #dish_price {
     float: right;
-    color: lightgrey;
+    color: #bbb;;
 }
 .desc {
     padding: 5px;
@@ -170,19 +171,23 @@ form#register .ui-select {
     margin-top: 0px;
     font-size: 12pt;
 }
-.add {
+.plus, 
+.minus {
     color: white;
-    font-size: 3em;
-    font-weight: bold;
-    border: 5px solid white;
-    border-radius: 50%;
-    width: 35px;
-    height: 40px;
     line-height: 0.7em;
+    font-size: 3em;
+    width: 40px;
+    height: 46px;
     padding-left: 5px;
-    text-shadow: 0 0 5px grey;
-    box-shadow: 0px 0px 5px grey;
+    background-position: -16px;
 }
+.plus {
+    background-image: url('../images/plus.svg');   
+}
+.minus {
+    background-image: url('../images/minus.svg');   
+}
+ 
 .add-circle {
     text-decoration: none;
     float: right;
@@ -193,13 +198,14 @@ form#register .ui-select {
     border: none;
     font-size: 3em;
     background: none;
-    margin-top: -3px;
+    margin-top: -7px;
     float: right;
     width: 30px;
     font-weight: bold;
-    margin-left: 5px
+    margin-left: 5px;
+    text-shadow: 0 0 5px grey;
 }
 
 .top-layer {
-    height: 100px;
+    height: 80px;
 }
