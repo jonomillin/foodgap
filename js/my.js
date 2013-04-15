@@ -45,13 +45,25 @@ function handleLogin() {
                 $.mobile.changePage("main.html");
                 console.log('changed');
             } else {
-                alert("Incorrect email and/or password.");
+                navigator.notification.alert(
+'Incorrect email and/or password.',  // message
+function() {},         // callback
+'Info',            // title
+'OK'                  // buttonName
+);
+   
             }
          $("#submitButton").removeAttr("disabled");
         },"json");
     } else {
         //Thanks Igor!
-        alert("You must enter a email and password");
+        navigator.notification.alert(
+'You must enter an email and password.',  // message
+function() {},         // callback
+'Info',            // title
+'OK'                  // buttonName
+);
+   
         $("#submitButton").removeAttr("disabled");
     }
     return false;
@@ -61,7 +73,15 @@ function handleLogin() {
 function httpPost (url, jdata, callback)
 {
 
-  $.post(url, jdata, callback).error( function() { alert("We're making some updates at our end. Check back in a little while!")});
+  $.post(url, jdata, callback).error( function() { 
+    navigator.notification.alert(
+'You require an active data connection.',  // message
+function() {},         // callback
+'Info',            // title
+'OK'                  // buttonName
+);
+   
+  });
 }
 
 // Some filthy hack to pass parameters between pages.
@@ -89,9 +109,26 @@ function httpGet( url, callback)
                 cache = data;
             }
             return callback(data);
-        }).error( function() { alert("We're making some updates at our end. Check back in a little while!")});
+        }).error( function() { 
+                navigator.notification.alert(
+'You require an active data connection.',  // message
+function() {},         // callback
+'Info',            // title
+'OK'                  // buttonName
+);
+   
+
+        });
     } else {
-        $.getJSON(url, callback).error( function() { alert("We're making some updates at our end. Check back in a little while!")});
+        $.getJSON(url, callback).error( function() { 
+    navigator.notification.alert(
+'You require an active data connection.',  // message
+function() {},         // callback
+'Info',            // title
+'OK'                  // buttonName
+);
+   
+        });
     }
 }
 
@@ -207,6 +244,7 @@ $('#meal_choice').live('pageshow', function () {
     });
 
     $('#order').click(function() {
+        $.mobile.showPageLoadingMsg();
         var postData = {}
         var totalItems = 0;
          $('input[name^="quantity"]').each( function() {
@@ -217,7 +255,15 @@ $('#meal_choice').live('pageshow', function () {
 
          if (totalItems == 0)
          {
-            alert('You must select at least on item');
+            $.mobile.hidePageLoadingMsg();
+   
+            navigator.notification.alert(
+'You must select at least one item.',  // message
+function() {},         // callback
+'Info',            // title
+'OK'                  // buttonName
+);
+   
             $('#order').removeClass('ui-btn-active')
             return 0;
          }
@@ -230,6 +276,7 @@ $('#meal_choice').live('pageshow', function () {
             console.log("Back from confirmations.");
             data = $.parseJSON( data );
             console.log(data['order_id']);
+            $.mobile.hidePageLoadingMsg();
             $.mobile.changePage( "confirm.html?order_id=" + data['order_id'], { transition: "slide" });
 
         });
@@ -266,9 +313,12 @@ $('#confirm').live('pageshow', function () {
         // Set page items from json object.
 
         $('#confirm_button').bind('click', function() {
+            $.mobile.showPageLoadingMsg();
+            $('#order').removeClass('ui-btn-active')
             console.log("Clicked confirm");
             
             httpPost (confirmAPI, {"order_id" : order_id, 'time' : $('#booking_time').val()}, function() {
+                $.mobile.hidePageLoadingMsg();
                 $.mobile.changePage( "success.html", { transition: "slide" });
 
             } );
