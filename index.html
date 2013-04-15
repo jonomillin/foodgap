@@ -47,6 +47,30 @@
 			console.log('Both frameworks loaded.');
 			console.log('Init nornal');
 			init();	
+
+			$.fn.preload = function() {
+ 		    	this.each(function(){
+             	$('<img/>')[0].src = this;
+    			});
+			}
+
+			//$(['img1.jpg','img2.jpg','img3.jpg']).preload();
+
+			 httpGet(dealAPI, function(f) {
+			 	for(var fs in f)
+			 	{
+			 		var img = f[fs].image;
+			 		$([img]).preload();
+
+			 		for(var ts in f[fs].components)
+			 		{
+			 			var im = f[fs].components[ts].image;
+			 			console.log(im);
+			 			$([im]).preload();
+			 		}
+			 	}	
+			 });
+
 			console.log('Check preauth');
 			checkPreAuth();
 		}
