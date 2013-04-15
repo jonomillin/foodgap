@@ -11,7 +11,7 @@
     background-repeat: no-repeat;
     box-shadow: 2px 2px 1px rgb(231, 231, 231); 
     text-decoration: none;
-    color: white;
+    color: black;
     display: block;
     background-size: 100%;
 }
@@ -33,7 +33,7 @@ div.ui-content {padding: 0px 0px 0px 0px;}
     font-size: 50pt;
     font-style: ultra-light;
     padding: 5px 5px 30%;
-    color: #FFFFFF;
+    color: white;
 }
 /*Front Page*/
 #eat-out {
@@ -48,6 +48,8 @@ div.ui-content {padding: 0px 0px 0px 0px;}
 .gradient{
     background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
     padding-left: 2%;
+    color: white;
+    font-weight: 100;
 }
 .ui-header .ui-title {
     font-family: 'clicker script';
@@ -59,7 +61,7 @@ div.ui-content {padding: 0px 0px 0px 0px;}
 .ui-body-c .ui-link:visited, 
 .ui-body-c .ui-link:hover, 
 .ui-body-c .ui-link {
-    color: white;
+    color: black;
     font-weight: 100;
     padding: 29.2% 0 0 0;
 }
