@@ -67,9 +67,14 @@
 
 
 			<div data-role="content">
-				<form data-transition=slide id='loginForm'>
-					Email: <input type="text" id="email">
-					Password: <input type="password" id="password">
+				<form data-transition=slide id='loginForm' autocomplete="off">
+					<div data-role="fieldcontain" class="ui-hide-label">
+					<input type="text" id="email" placeholder="Email">
+					</div>
+					<div data-role="fieldcontain" class="ui-hide-label">
+					<input type="password" id="password" placeholder="Password">
+					</div>
+
 					<input type='submit' name='submit' value='Login'>
 				</form>
 				<br><br>
