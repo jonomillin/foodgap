@@ -1,3 +1,7 @@
+
+
+
+
 var dealAPI = 'http://secret-coast-5576.herokuapp.com/deals';
 var confirmAPI = 'http://secret-coast-5576.herokuapp.com/confirm';
 var signinAPI = 'http://secret-coast-5576.herokuapp.com/api/signin';
@@ -5,18 +9,9 @@ var signinAPI = 'http://secret-coast-5576.herokuapp.com/api/signin';
 // var dealAPI = 'http://127.0.0.1:10080/deals';
 // var confirmAPI = 'http://127.0.0.1:10080/confirm';
 // var signinAPI = 'http://127.0.0.1:10080/api/signin';
-
 var cache;
 var useCaching = false;
 // Make httpPost request to url and then return callback.
-
-function init() {
-    console.log('init called');
-    document.addEventListener("deviceready", deviceReady, true);
-    delete init;
-}
-
-
 function checkPreAuth() {
     console.log('Int pre auth');
     var form = $("#loginForm");
@@ -27,7 +22,7 @@ function checkPreAuth() {
     }
     else
     {
-        console.log('NOthing stored');
+        console.log('Nothing stored');
     }
 }
 
@@ -48,8 +43,9 @@ function handleLogin() {
                window.localStorage["password"] = p;             
                console.log('success');
                 $.mobile.changePage("main.html");
+                console.log('changed');
             } else {
-                alert("Your login failed");
+                alert("Incorrect email and/or password.");
             }
          $("#submitButton").removeAttr("disabled");
         },"json");
@@ -61,11 +57,6 @@ function handleLogin() {
     return false;
 }
 
-function deviceReady() {
- console.log('device reading called');
- $("#loginForm").on("submit",handleLogin);
-
-}
 
 function httpPost (url, jdata, callback)
 {
@@ -149,8 +140,17 @@ function build_meal_choice_element(item, image, name, price, description)
 //     });
 
 // }
+function init()
+{
+    console.log('Attaching even handlers');
+
+console.log('Attaching manual login submit.');
+$("#loginForm").on("submit",handleLogin);
+
+
 
 // Fetch and show all the options for eating out at a particular restaurant. 
+console.log('Attaching #out pageshow.');
 $('#out').live('pageshow', function () {     
     $.mobile.showPageLoadingMsg();
     var dinner_type = $.urlParam('dinner_type');
@@ -184,6 +184,7 @@ $('#out').live('pageshow', function () {
     });
 });
 
+console.log('Attaching #mealchoice pageshow.');
 $('#meal_choice').live('pageshow', function () {
     $.mobile.showPageLoadingMsg();
     var choice = $.urlParam('choice');
@@ -238,7 +239,7 @@ $('#meal_choice').live('pageshow', function () {
 
 
 
-
+console.log('Attaching #confirm pageshow.');
 $('#confirm').live('pageshow', function () {     
     $.mobile.showPageLoadingMsg();
     var order_id = $.urlParam('order_id');
@@ -279,3 +280,4 @@ $('#confirm').live('pageshow', function () {
 });
 
 
+}

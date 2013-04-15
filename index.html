@@ -11,13 +11,54 @@
         <link rel="stylesheet" href="css/style.css" />
         <link href='http://fonts.googleapis.com/css?family=Clicker+Script' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+        
+        
         <script src="js/jquery-1.7.2.min.js"></script>
+        
+        <script>
+        	var deviceReadyDeferred = $.Deferred();
+			var jqmReadyDeferred = $.Deferred();
+			
+        	$(document).one("mobileinit", function () {
+				console.log('JQ frameworks loaded.');
+				jqmReadyDeferred.resolve();
+			});
+       	</script>
+
+		
         <script src="js/jquery.mobile-1.2.0.min.js"></script>
         <script src="js/my.js"></script>      
+        <script type="text/javascript">
+
+		function onDeviceReady() {
+			console.log('Device ready.');
+			deviceReadyDeferred.resolve();
+
+		}
+
+		$(function() {
+		    document.addEventListener("deviceready", onDeviceReady, true);
+
+		});
+
+		function doWhenBothFrameworksLoaded() 
+		{
+			console.log('Both frameworks loaded.');
+			console.log('Init nornal');
+			init();	
+			console.log('Check preauth');
+			checkPreAuth();
+		}
+
+		$.when(deviceReadyDeferred, jqmReadyDeferred).then(doWhenBothFrameworksLoaded);
+
+
+        </script>
+        
 	</head>
 
 
-	<body onload='init();'>
+	<body>
 
 		<div data-role="page" id="loginPage">
 			<div data-role="header">
@@ -36,12 +77,9 @@
 			</div> <!-- /Content -->
 
 		</div> <!-- /Page -->
-<script>
- $("#loginPage").live("pageinit", function(e) {
- 		console.log('in footer code');
-        checkPreAuth();
-    });
-</script>
+		<script src="phonegap.js"></script>
+		
+
 	</body>
 
 </HTML>
