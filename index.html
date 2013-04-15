@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<!DOCTYPE HTML>
 
+<HTML>
+	<head>
+		<meta charset="UTF-8">
+		<title>Dinner</title>
+
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
         <link href="css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
         <link rel="stylesheet" href="css/style.css" />
@@ -14,22 +14,34 @@
         <script src="js/jquery-1.7.2.min.js"></script>
         <script src="js/jquery.mobile-1.2.0.min.js"></script>
         <script src="js/my.js"></script>      
-    </head>
+	</head>
 
 
-    <body>
-        <!-- Home -->
-        <div data-role="page" id="home" data-dom-cache=true>
-            <div data-theme="a" data-role="header">
-                <h3>Dinner</h3>
-            </div>
-            
-            <div data-role="content" id="container">
-                <a href="out.html" class="box start" id="eat-out" data-transition=slide data-prefetch>Eat Out</a>
-                <a href="in.html" class="box start" id="order-in" data-transition=slide data-prefetch>Order In</a>
-                <a href="cook.html" class="box start" id="cook-in" data-transition=slide data-prefetch>Cook In</a>
-            </div>
-        </div>
-    <script src="phonegap.js"></script>
-    </body>
-</html>
+	<body onload='init();'>
+
+		<div data-role="page" id="loginPage">
+			<div data-role="header">
+				<h1>Login</h1>
+			</div> <!-- /Header -->
+
+
+			<div data-role="content">
+				<form data-transition=slide id='loginForm'>
+					Email: <input type="text" id="email">
+					Password: <input type="password" id="password">
+					<input type='submit' name='submit' value='Login'>
+				</form>
+				<br><br>
+				<a href='http://secret-coast-5576.herokuapp.com/signup'>Create an account?</a>
+			</div> <!-- /Content -->
+
+		</div> <!-- /Page -->
+<script>
+ $("#loginPage").live("pageinit", function(e) {
+ 		console.log('in footer code');
+        checkPreAuth();
+    });
+</script>
+	</body>
+
+</HTML>
