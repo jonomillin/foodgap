@@ -1,10 +1,11 @@
 
 #container {
     background-color: whitesmoke;
+    height: 100%;
 }
 
 .box {
-    margin: 20px 0;
+    margin: 0px 0px 0px 0px;
     border: 1px solid lightgrey;
     background-color: white;
     background-repeat: no-repeat;
@@ -12,30 +13,43 @@
     text-decoration: none;
     color: black;
     display: block;
+    background-size: 100%;
 }
 .box:first-child {
-    margin-top:5px;
+    /*margin-top:5px;*/
 }
 /* hack to keep nested content boxes from getting smaller and smaller. */
-.ui-content div.ui-content {padding: 0;}
+.ui-content {
+    padding: 0px;
+}
+
+div.ui-content {padding: 0px 0px 0px 0px;}
 
 .start {
     font-size: 24pt;
     background-position: right;
-    font-family: 'open sans';
-    font-weight: 200;
-    font-style: italic;
-    padding: 25px 20px;
+    font-family: 'lato', sans-serif;
+    font-weight: 100;
+    font-size: 50pt;
+    font-style: ultra-light;
+    padding: 5px 5px 30%;
+    color: white;
 }
 /*Front Page*/
 #eat-out {
-    background-image: url('../img/reserved.png') ;
+    background-image: url('../img/eat_out.jpg') ;
 }
 #order-in {
-    background-image: url('../img/takeawaybox.png');
+    background-image: url('../img/takeout_table.jpg');
 }
 #cook-in {
-    background-image: url('../img/pot.png');
+    background-image: url('../img/cook_home.jpg');
+}
+.gradient{
+    background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    padding-left: 2%;
+    color: white;
+    font-weight: 100;
 }
 .ui-header .ui-title {
     font-family: 'clicker script';
@@ -48,7 +62,8 @@
 .ui-body-c .ui-link:hover, 
 .ui-body-c .ui-link {
     color: black;
-    font-weight: 300;
+    font-weight: 100;
+    padding: 29.2% 0 0 0;
 }
 
 /*Out*/
